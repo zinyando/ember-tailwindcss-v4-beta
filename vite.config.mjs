@@ -10,6 +10,7 @@ import {
   contentFor,
 } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
+import tailwindcss from '@tailwindcss/vite';
 
 const extensions = [
   '.mjs',
@@ -35,6 +36,7 @@ export default defineConfig(({ mode }) => {
       compatPrebuild(),
       assets(),
       contentFor(),
+      tailwindcss(),
 
       babel({
         babelHelpers: 'runtime',
